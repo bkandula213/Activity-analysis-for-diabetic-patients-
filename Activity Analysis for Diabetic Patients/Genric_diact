@@ -1,0 +1,50 @@
+Heart Rate Formulas
+Karp states that there are two formulas to figure your heart rate while running. For the first, subtract your age from 220 to find your maximum heart rate. A 32-year-old's max heart rate would be 188 beats per minute. The second formula, the Karvonen Method, determines your average running heart rate. This is determined by subtracting your resting heart rate from your max heart rate. If the 32-year-old runner's resting pulse is 60, subtract that from 188 to get a 128 average training heart rate.
+Heart Rate Zones
+If you want to improve your performance you have to increase your effort above your average training heart rate. The aerobic zone represents a harder running effort at 70 to 80 percent of your max heart rate. For the 32-year-old, his aerobic heart rate zone would be 188 (max) x .70 = 132 and 188 x .80 = 150. This runner's average range aerobic heart rate zone stays between 132 to 150 beats per minute. Karp does point out that the "220 minus age" formula is an estimate and can be off by 10 to 15 beats per minute.
+
+Formulae used:
+Calculate the time of activity based the input files.If there is any variation in the readings, then count the time. Othrewise not.
+bending1...65% of max heart rate; Bending2...72% of max heart rate; Cycling...80% of max heart rate. Max heart rate is (220-age)
+For the mini project, no distinction is made between men and women.
+
+Calories Burned = [(Age x 0.2017) — (Weight x 0.09036) + (Heart Rate x 0.6309) — 55.0969] x Time / 4.184.
+calories = (((float(page)*0.217)-(float(pweight)*0.09036)+(float(220-page)*0.6309) - 55.0969)*float(b1time_mins)) / 4.184
+
+
+
+pyuic5 diact.ui -o diact.py
+pyuic5 patient.ui -o patient.py
+pyuic5 dinpgui.ui -o dinpgui.py
+pyuic5 dinpfil.ui -o dinpfil.py
+
+.open pricmp1
+
+CREATE TABLE patient
+(
+pid varchar(10),
+pname varchar(40),
+page varchar(3),
+pweight varchar(7),
+addr1 varchar(255),
+addr2 varchar(255),
+aadharid varchar(10),
+mobileid varchar(10)
+);
+
+CREATE TABLE dingui
+(
+pid varchar(10),
+timeseg varchar(10),
+avg_rss12 varchar(10),
+var_rss12 varchar(10),
+avg_rss13 varchar(10),
+var_rss13 varchar(10),
+avg_rss14 varchar(10),
+var_rss14 varchar(10),
+act_code varchar(1)
+);
+
+.save pricmp1
+
+
